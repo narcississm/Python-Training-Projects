@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h2>Notu Düzenle</h2>
+<form method="POST" action="{{ url_for('update', id=note.id) }}">
+    <textarea name="content" required>{{ note.content }}</textarea>
+    <button type="submit">Güncelle</button>
+</form>
+<a href="{{ url_for('index') }}">Geri dön</a>
+{% endblock %}
